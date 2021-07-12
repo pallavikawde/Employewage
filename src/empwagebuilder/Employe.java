@@ -28,7 +28,7 @@ public class Employe {
 			}
 			else 
 				System.out.println("Its a Part day");
-			
+			wage = wage + (wagePerHr * PART_DAY_HR);
 			
 			}
 		else {
