@@ -1,5 +1,7 @@
 package empwagebuilder;
 
+import java.util.Scanner;
+
 public class Employe {
 	public static void main(String[] args) {
 		System.out.println("Welcome");
@@ -33,7 +35,27 @@ public class Employe {
 			}
 		else {
 			System.out.println("Employee is absent");
-			}
+	
+		}
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("enter your choice\n1.wages per month \n2.wages for a condition");
+		int choice = sc.nextInt();
+		
+		switch(choice) {
+		case 1:
+		
+		break;
+	
+		case 2:
+		
+		
+		break;
+		default:
+			System.out.println("invalid choice");
+			break;
+		}
+		
 		
 		
 		
