@@ -73,8 +73,28 @@ public class Employe {
 		break;
 	
 		case 2:
+			int days=0;
+			int hr=0;
+		while(days<=20  && hr<=100) {
+			dayType = Math.floor(Math.random()*10)%2;
 		
+		if (dayType == IS_FULL_DAY) { 
+			System.out.println("Its a full day " );
+			month_wage = month_wage + (wagePerHr * FULL_DAY_HR);
+			days++;
+			hr=hr+ FULL_DAY_HR;
+			
+		}
+		else { 
+			System.out.println("Its a Part day " );
+			month_wage = month_wage + (wagePerHr * PART_DAY_HR);
+			days ++;
+			hr=hr+PART_DAY_HR;
+		}
+		}
 		
+		System.out.println("days are =" +days+ " hr is =" +hr);
+			
 		break;
 		default:
 			System.out.println("invalid choice");
