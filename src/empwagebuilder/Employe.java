@@ -9,6 +9,7 @@ int FULL_DAY_HR;
 int PART_DAY_HR;
 int IS_FULL_DAY = 1;
 double dayType;
+int month_wage=0;
 
 public OOPEmpWage(int wagePerHr, int FULL_DAY_HR, int PART_DAY_HR)
 {
@@ -45,7 +46,7 @@ public void empCheck(){
 public void empWage(){
     int i;
     int WORKING_DAYS_MONTH = 20;
-    int month_wage=0;
+     month_wage=0;
     int dailyWage;
 
     Scanner ch = new Scanner(System.in);
@@ -101,6 +102,10 @@ public void empWage(){
             break;
     }
 }
+// using getter methode for month wage
+		public int getmonthwage() {
+			return month_wage;
+		}
 
 }
 
@@ -111,10 +116,13 @@ public static void main(String[] args){
     OOPEmpWage reliance = new OOPEmpWage(20,8,6);
     reliance.empCheck();
     reliance.empWage();
+    //using getter
+    System.out.println("wage for reliance"+reliance.getmonthwage());
     
     System.out.println("** FOR Pantaloon");
     OOPEmpWage pantaloon = new OOPEmpWage(30,9,5);
     pantaloon.empCheck();
     pantaloon.empWage();
+    System.out.println("wage for pantaloon"+pantaloon.getmonthwage());
 }
 }
